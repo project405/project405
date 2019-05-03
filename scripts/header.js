@@ -26,4 +26,5 @@ header = '<div class="header">\
         </nav>\
     </div>\ ';
 
+
 document.write(header);
