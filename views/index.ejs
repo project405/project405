@@ -111,7 +111,26 @@
     <div class="article">
         <h2>熱門文章</h2>
         <center>
-            <hr />
+            <table>
+                <thead>
+                    <tr>
+                        <th width="15%">文章標題</th>
+                        <th width="15%">發文者</th>
+                        <th width="15%">文章分類</th>
+                        <th width="15%">發文時間</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i<artiData.length; i++) {%>
+                    <tr>
+                        <td><a href="/article/p<%= artiData[i].artiNum %>"><%= artiData[i].artiHead %></a></td>
+                        <td><%= artiData[i].memID %></td>
+                        <td><%= artiData[i].artiClass %></td>
+                        <td><%= artiData[i].artiDateTime %></td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
         </center>
     </div>
 
